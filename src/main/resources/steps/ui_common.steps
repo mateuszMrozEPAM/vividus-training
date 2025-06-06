@@ -1,1 +1,11 @@
+Composite: Given I navigate to the SauceDemo website homepage
+Given I am on main application page
+When I wait until element located by `caseSensitiveText(Swag Labs)` appears
+Then `${current-page-url}` is equal to `https://www.saucedemo.com/`
 
+Composite: When I log in as a user with username: $username and password: $password
+When I add `<username>` to field located by `id(user-name)`
+When I add `<password>` to field located by `id(password)`
+When I click on element located by `name(login-button)`
+When I wait until element located by `caseSensitiveText(Products)` appears
+Then `${current-page-url}` is equal to `https://www.saucedemo.com/inventory.html`
