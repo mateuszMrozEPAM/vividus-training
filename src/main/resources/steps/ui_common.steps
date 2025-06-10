@@ -1,1 +1,19 @@
 
+Composite: Given I navigate to the SauceDemo website homepage
+Given I am on main application page
+When I wait until element located by `caseSensitiveText(Swag Labs)` appears
+Then `${current-page-url}` is equal to `https://www.saucedemo.com/`
+When I COMPARE_AGAINST baseline with name `loginPage2` ignoring:
+|ACCEPTABLE_DIFF_PERCENTAGE |
+|5                          |
+
+
+Composite: When I log in as a user with username: $username and password: $password and $compare baselinePicture with diff percentage: $diffPercantage
+When I add `<username>` to field located by `id(user-name)`
+When I add `<password>` to field located by `id(password)`
+When I click on element located by `name(login-button)`
+When I wait until element located by `caseSensitiveText(Products)` appears
+Then `${current-page-url}` is equal to `https://www.saucedemo.com/inventory.html`
+When I <compare> baseline with name `homepage2` ignoring:
+|ELEMENT                                            |  ACCEPTABLE_DIFF_PERCENTAGE |
+|By.xpath(//div[@class='inventory_item_img']//img)  |  <diffPercantage>           |
