@@ -1,2 +1,7 @@
 {
+   "BUG-001": {
+    "type": "Internal",
+    "assertionPattern": ".*Expected: \"https:\\/\\/www.saucedemo.com\\/\\inventory.html\" Actual: was \"https:\\/\\/www.supersaucedemo.com\\/\"",
+    "description": "Website URL to be fixed in the upcoming release"
+    }
 }
