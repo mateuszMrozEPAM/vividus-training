@@ -1,7 +1,11 @@
 {
    "BUG-001": {
     "type": "Internal",
-    "assertionPattern": ".*Expected: \"https:\\/\\/www.saucedemo.com\\/\\inventory.html\" Actual: was \"https:\\/\\/www.supersaucedemo.com\\/\"",
-    "description": "Website URL to be fixed in the upcoming release"
+    "assertionPattern": ".*Expected: \"https:\\/\\/www.saucedemo.com\\/inventory.html\" Actual: was \"https:\\/\\/www.saucedemo.com\\/\".*"
+    },
+
+    "BUG-002": {
+    "type": "Internal",
+    "assertionPattern": ".*Expected condition failed: waiting for number of elements located by \"xpath \\'\\/\\/div\\[@class=\\'inventory_item\\'\\]\\' \\(visible\\)\" is equal to 6 \\(tried for 60 second\\(s\\) with 2000 milliseconds interval\\).*"
     }
 }
